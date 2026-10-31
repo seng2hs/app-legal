@@ -12,7 +12,7 @@ import re
 import shutil
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image
 
 SRC = Path(r"D:\Work\Senthil\capitalnest-policy")
 ROOT = Path(__file__).resolve().parents[1]
