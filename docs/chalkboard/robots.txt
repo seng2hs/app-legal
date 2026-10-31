@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://seng2hs.github.io/app-legal/chalkboard/sitemap.xml

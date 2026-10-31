@@ -1,36 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PaperShelf — Legal</title>
-  <meta name="description" content="PaperShelf — Legal" />
-  <link rel="stylesheet" href="../styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PaperShelf — Your documents. Your shelf.</title>
+  <meta name="description" content="PaperShelf helps you keep documents and reading material organized on your device — find what you need without clutter.">
+  <meta name="keywords" content="documents, pdf organizer, reading, paper shelf, file library, PaperShelf">
+  <meta name="author" content="PaperShelf">
+  <meta name="theme-color" content="#B45309">
+  <link rel="canonical" href="https://seng2hs.github.io/app-legal/paper-shelf/">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://seng2hs.github.io/app-legal/paper-shelf/">
+  <meta property="og:title" content="PaperShelf — Your documents. Your shelf.">
+  <meta property="og:description" content="PaperShelf helps you keep documents and reading material organized on your device — find what you need without clutter.">
+  <meta property="og:image" content="https://seng2hs.github.io/app-legal/paper-shelf/assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "PaperShelf",
+        "url": "https://seng2hs.github.io/app-legal/paper-shelf/",
+        "logo": "https://seng2hs.github.io/app-legal/paper-shelf/assets/logo.png",
+        "email": "support@papershelf.app"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "PaperShelf",
+        "applicationCategory": "ProductivityApplication",
+        "operatingSystem": "Android",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+        "description": 'PaperShelf helps you keep documents and reading material organized on your device — find what you need without clutter.'
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": 'Where are my documents stored?',
+            "acceptedAnswer": { "@type": "Answer", "text": 'Primarily on your device. Shared/exported copies live wherever you saved them.' }
+          },
+          {
+            "@type": "Question",
+            "name": 'How do I delete my library?',
+            "acceptedAnswer": { "@type": "Answer", "text": 'Clear app storage or uninstall PaperShelf. See Data Deletion for steps.' }
+          },
+          {
+            "@type": "Question",
+            "name": 'Does PaperShelf upload my PDFs?',
+            "acceptedAnswer": { "@type": "Answer", "text": 'Core library use is local-first. Online features, if added, will be disclosed in Privacy Policy updates.' }
+          },
+          {
+            "@type": "Question",
+            "name": 'How do I contact support?',
+            "acceptedAnswer": { "@type": "Answer", "text": 'Use the Contact page with device details and what went wrong.' }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-  <div class="wrap">
-    <nav class="nav"><a class="brand" href="../index.html">app-legal<small>PaperShelf</small></a>
-        <div class="nav-links">
-          <a href="index.html">About</a>
-          <a href="privacy.html">Privacy</a>
-          <a href="terms.html">Terms</a>
-          <a href="support.html">Support</a>
-          <a href="deletion.html">Deletion</a>
-        </div></nav>
-    
-    <div class="card hero">
-      <div class="badge">App legal pages</div>
-      <h1>PaperShelf</h1>
-      <p>Documents and reading shelf</p>
-      <p>PaperShelf helps you keep and organize documents and reading material on your device.</p>
-      <p>
-        <a href="privacy.html">Privacy Policy</a> ·
-        <a href="terms.html">Terms of Use</a> ·
-        <a href="support.html">Support</a> ·
-        <a href="deletion.html">Data Deletion</a>
-      </p>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="PaperShelf home">
+        <img src="assets/logo.png" alt="" width="44" height="44">
+        <span class="brand-text">
+          <span class="brand-name">PaperShelf</span>
+          <span class="brand-tag">Your documents. Your shelf.</span>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" class="active">Home</a>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#benefits">Benefits</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="support.html">Contact</a>
+      </nav>
+      <a class="btn btn-primary nav-cta btn-coming" href="index.html#download">Coming Soon</a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
     </div>
-    <p class="footer">Hosted for Google Play / AdMob · Last updated 31 October 2026</p>
-  </div>
+  </header>
+
+  <div class="drawer-overlay" id="drawer-overlay" hidden></div>
+  <aside class="drawer" id="mobile-drawer" aria-label="Mobile navigation" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="drawer-brand">
+        <img src="assets/logo.png" alt="" width="36" height="36">
+        PaperShelf
+      </div>
+      <button class="drawer-close" id="drawer-close" type="button" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <nav class="drawer-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#features">Features</a>
+      <a href="index.html#benefits">Benefits</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="support.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="deletion.html">Data Deletion</a>
+    </nav>
+    <a class="btn btn-primary btn-block btn-coming" href="index.html#download">Coming Soon</a>
+  </aside>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-glow"></div>
+        <div class="hero-glow-2"></div>
+      </div>
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <div class="hero-badge">Documents · Private Shelf</div>
+          <h1 class="hero-title">Keep.<br>Organize.<br><span class="accent">Read.</span></h1>
+          <p class="hero-sub">A calm shelf for the papers that matter.</p>
+          <p class="hero-desc">PaperShelf helps you keep documents and reading material organized on your device — find what you need without clutter.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-coming" href="#download" id="download">Coming Soon</a>
+            <a class="btn btn-secondary" href="#features">Explore Features</a>
+          </div>
+        </div>
+        <div class="hero-visual reveal reveal-delay-2">
+          <div class="phone">
+            <div class="phone-screen" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(160deg,#B45309,#92400E);color:#fff;min-height:420px;padding:2rem;text-align:center;">
+              <div>
+                <img src="assets/logo.png" alt="" width="72" height="72" style="margin:0 auto 1rem;border-radius:16px;">
+                <h2 style="font-size:1.4rem;margin-bottom:.5rem;">PaperShelf</h2>
+                <p style="opacity:.9;">Your documents. Your shelf.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust" aria-label="Trust indicators">
+      <div class="container trust-grid">
+        <div class="trust-item reveal">
+          <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <span>Local Library</span>
+        </div>
+        <div class="trust-item reveal reveal-delay-2">
+          <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg></div>
+          <span>Private Files</span>
+        </div>
+        <div class="trust-item reveal reveal-delay-3">
+          <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4 4 0 01.5-7.9A5 5 0 0117 9a3.5 3.5 0 01.5 7H7z"/></svg></div>
+          <span>Quick Find</span>
+        </div>
+        <div class="trust-item reveal reveal-delay-1">
+          <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.5 5.5l2.5 2.5M16 16l2.5 2.5M18.5 5.5L16 8M8 16l-2.5 2.5"/></svg></div>
+          <span>Import Friendly</span>
+        </div>
+        <div class="trust-item reveal reveal-delay-2">
+          <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V9l4 2 4-5 4 4 4-3"/><path d="M4 19h16"/></svg></div>
+          <span>Clean Layout</span>
+        </div>
+        <div class="trust-item reveal reveal-delay-3">
+          <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 10-14h-7l1-6z"/></svg></div>
+          <span>Play Updates</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Features</span>
+          <h2 class="section-title">Everything You Need</h2>
+          <p class="section-desc">PaperShelf helps you keep documents and reading material organized on your device — find what you need without clutter.</p>
+        </div>
+        <div class="features-grid">
+          <article class="feature-card reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></div>
+            <h3>Document Shelf</h3>
+            <p>Keep PDFs and papers in one organized place.</p>
+          </article>
+          <article class="feature-card reveal reveal-delay-2">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></div>
+            <h3>Quick Browse</h3>
+            <p>Find documents without digging through folders.</p>
+          </article>
+          <article class="feature-card reveal reveal-delay-3">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></div>
+            <h3>Import Files</h3>
+            <p>Add documents when you choose to import them.</p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></div>
+            <h3>Reading Focus</h3>
+            <p>A simple layout for less distraction.</p>
+          </article>
+          <article class="feature-card reveal reveal-delay-2">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></div>
+            <h3>Local First</h3>
+            <p>Your library stays on the device by default.</p>
+          </article>
+          <article class="feature-card reveal reveal-delay-3">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></div>
+            <h3>Share Out</h3>
+            <p>Export or share files only when you decide.</p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></div>
+            <h3>Search Ready</h3>
+            <p>Locate items faster as your shelf grows.</p>
+          </article>
+          <article class="feature-card reveal reveal-delay-2">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></div>
+            <h3>Lightweight</h3>
+            <p>Built to feel quick on everyday Android phones.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="benefits">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Why PaperShelf</span>
+          <h2 class="section-title">Built for Documents. Designed for Calm.</h2>
+          <p class="section-desc">PaperShelf is for people who want a private, tidy place for reading and reference material — without a complicated DMS.</p>
+        </div>
+        <div class="benefit-cards">
+          <article class="benefit-card reveal">
+            <h3>Privacy First</h3>
+            <p>Documents stay local unless you share them.</p>
+          </article>
+          <article class="benefit-card reveal reveal-delay-1">
+            <h3>Less Clutter</h3>
+            <p>A shelf metaphor keeps things understandable.</p>
+          </article>
+          <article class="benefit-card reveal reveal-delay-2">
+            <h3>Your Library</h3>
+            <p>Import what you need; leave the rest out.</p>
+          </article>
+          <article class="benefit-card reveal reveal-delay-3">
+            <h3>Support Path</h3>
+            <p>Contact us if import or reading flow breaks.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-desc">Answers based on our Privacy Policy, Terms, Support and Data Deletion guidance.</p>
+        </div>
+        <div class="faq-list reveal">
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">Where are my documents stored?</button>
+            <div class="faq-answer"><p>Primarily on your device. Shared/exported copies live wherever you saved them.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">How do I delete my library?</button>
+            <div class="faq-answer"><p>Clear app storage or uninstall PaperShelf. See Data Deletion for steps.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">Does PaperShelf upload my PDFs?</button>
+            <div class="faq-answer"><p>Core library use is local-first. Online features, if added, will be disclosed in Privacy Policy updates.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">How do I contact support?</button>
+            <div class="faq-answer"><p>Use the Contact page with device details and what went wrong.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner" id="download">
+      <div class="container">
+        <div class="cta-inner reveal">
+          <div class="cta-copy">
+            <div class="cta-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 14.9 7.2 17l.9-5.4L4.2 7.7l5.4-.8L12 2z"/></svg>
+            </div>
+            <div>
+              <h3>Get PaperShelf</h3>
+              <p>Coming soon on Google Play. Privacy Policy and Terms are already available for store listing.</p>
+            </div>
+          </div>
+          <div class="cta-action">
+            <a class="btn btn-primary btn-coming" href="support.html">Contact Support</a>
+            <small>Coming soon on Google Play</small>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="" width="36" height="36">
+          <strong>PaperShelf</strong>
+        </div>
+        <p>A calm shelf for the papers that matter.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#benefits">Benefits</a>
+        <a href="index.html#faq">FAQ</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="deletion.html">Data Deletion</a>
+        <a href="support.html">Contact</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 PaperShelf. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

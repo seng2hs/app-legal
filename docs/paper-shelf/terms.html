@@ -1,65 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Terms of Use — PaperShelf</title>
-  <meta name="description" content="Terms of Use — PaperShelf" />
-  <link rel="stylesheet" href="../styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms & Conditions — PaperShelf</title>
+  <meta name="description" content="Terms & Conditions for PaperShelf.">
+  <meta name="theme-color" content="#B45309">
+  <link rel="canonical" href="https://seng2hs.github.io/app-legal/paper-shelf/terms.html">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-  <div class="wrap">
-    <nav class="nav"><a class="brand" href="../index.html">app-legal<small>PaperShelf</small></a>
-        <div class="nav-links">
-          <a href="index.html">About</a>
-          <a href="privacy.html">Privacy</a>
-          <a href="terms.html">Terms</a>
-          <a href="support.html">Support</a>
-          <a href="deletion.html">Deletion</a>
-        </div></nav>
-    
-    <article class="card">
-      <div class="badge">PaperShelf</div>
-      <h1>Terms of Use</h1>
-      <p class="meta">Last updated: 31 October 2026</p>
-      <p>By using PaperShelf (“the App”), you agree to these Terms.</p>
-      <h2>1. The App</h2>
-      <ul>
-        <li>PaperShelf helps you keep and organize documents and reading material on your device.</li>
-        <li>Features may change as we improve the App.</li>
-      </ul>
-      <h2>2. Your content</h2>
-      <ul>
-        <li>You own content you create.</li>
-        <li>You are responsible for what you enter, import, export, or share.</li>
-        <li>Do not use the App for unlawful, harmful, or infringing content.</li>
-      </ul>
-      <h2>3. Acceptable use</h2>
-      <ul>
-        <li>Use the App for personal / intended educational or productivity purposes.</li>
-        <li>Do not reverse engineer, abuse ads, or disrupt the App.</li>
-      </ul>
-      <h2>4. Ads and updates</h2>
-      <ul>
-        <li>Store builds may show advertisements.</li>
-        <li>Updates may be delivered through Google Play.</li>
-      </ul>
-      <h2>5. Disclaimer</h2>
-      <ul>
-        <li>The App is provided “as is” without warranties of any kind.</li>
-        <li>We are not liable for lost data, device issues, or third-party services (including ads or Play Store).</li>
-        <li>Export or back up important work if you need a copy outside the device.</li>
-      </ul>
-      <h2>6. Changes</h2>
-      <ul>
-        <li>We may update these Terms. Continued use after an update means you accept them.</li>
-      </ul>
-      <h2>7. Contact</h2>
-      <ul>
-        <li>See <a href="support.html">Support</a> or the Play Store listing.</li>
-      </ul>
-    </article>
-    <p class="footer">Hosted for Google Play / AdMob · Last updated 31 October 2026</p>
-  </div>
+<body class="page-inner">
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="PaperShelf home">
+        <img src="assets/logo.png" alt="" width="44" height="44">
+        <span class="brand-text">
+          <span class="brand-name">PaperShelf</span>
+          <span class="brand-tag">Your documents. Your shelf.</span>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" class="active">Home</a>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#benefits">Benefits</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="support.html">Contact</a>
+      </nav>
+      <a class="btn btn-primary nav-cta btn-coming" href="index.html#download">Coming Soon</a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="drawer-overlay" id="drawer-overlay" hidden></div>
+  <aside class="drawer" id="mobile-drawer" aria-label="Mobile navigation" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="drawer-brand">
+        <img src="assets/logo.png" alt="" width="36" height="36">
+        PaperShelf
+      </div>
+      <button class="drawer-close" id="drawer-close" type="button" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <nav class="drawer-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#features">Features</a>
+      <a href="index.html#benefits">Benefits</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="support.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="deletion.html">Data Deletion</a>
+    </nav>
+    <a class="btn btn-primary btn-block btn-coming" href="index.html#download">Coming Soon</a>
+  </aside>
+  <main class="page-inner-main">
+    <div class="container">
+      <article class="page-panel">
+        <h1>Terms &amp; Conditions</h1>
+        <p class="page-meta"><strong>Effective Date:</strong> October 2026</p>
+        <p>By using PaperShelf ("the App"), you agree to these Terms.</p>
+        <h2>1. The App</h2>
+        <p>PaperShelf helps you keep documents and reading material organized on your device — find what you need without clutter.</p>
+        <h2>2. Your Content</h2>
+        <p>You own content you create. You are responsible for what you enter, import, export, or share. Do not use the App for unlawful or infringing material.</p>
+        <h2>3. Acceptable Use</h2>
+        <p>Use the App for its intended personal / educational / productivity purpose. Do not reverse engineer, abuse ads, or disrupt the service.</p>
+        <h2>4. Ads &amp; Updates</h2>
+        <p>Store builds may show advertisements. Updates may be delivered through Google Play.</p>
+        <h2>5. Disclaimer</h2>
+        <p>The App is provided "as is" without warranties. We are not liable for lost data, device issues, or third-party services including ad networks and Play Store.</p>
+        <h2>6. Changes</h2>
+        <p>We may update these Terms. Continued use after an update means you accept the new Terms.</p>
+        <h2>7. Contact</h2>
+        <p>Email <strong>support@papershelf.app</strong> or use the <a href="support.html">Contact</a> page.</p>
+      </article>
+    </div>
+  </main>
+  <footer class="page-inner-footer">
+    <div class="container footer-bottom">
+      <p>&copy; 2026 PaperShelf. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html">Contact</a>
+        <a href="deletion.html">Data Deletion</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

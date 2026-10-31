@@ -1,52 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Data Deletion — KnoSpar</title>
-  <meta name="description" content="Data Deletion — KnoSpar" />
-  <link rel="stylesheet" href="../styles.css" />
+  <meta name="description" content="Data Deletion for KnoSpar.">
+  <meta name="theme-color" content="#4F46E5">
+  <link rel="canonical" href="https://seng2hs.github.io/app-legal/knospar/deletion.html">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-  <div class="wrap">
-    <nav class="nav"><a class="brand" href="../index.html">app-legal<small>KnoSpar</small></a>
-        <div class="nav-links">
-          <a href="index.html">About</a>
-          <a href="privacy.html">Privacy</a>
-          <a href="terms.html">Terms</a>
-          <a href="support.html">Support</a>
-          <a href="deletion.html">Deletion</a>
-        </div></nav>
-    
-    <article class="card">
-      <div class="badge">KnoSpar</div>
-      <h1>Account / Data Deletion</h1>
-      <p class="meta">Last updated: 31 October 2026</p>
-      <p>
-        KnoSpar primarily stores data on your device. This page explains how to remove that data
-        and how to request deletion of any data held by us (if applicable).
-      </p>
-      <h2>1. Delete data on your device</h2>
-      <ul>
-        <li>Open Android <strong>Settings → Apps → KnoSpar → Storage → Clear data</strong> (wording may vary by device).</li>
-        <li>Or uninstall KnoSpar to remove the app and its local app data from that device.</li>
-      </ul>
-      <h2>2. If you shared content</h2>
-      <ul>
-        <li>Files you exported (for example PDF or shared documents) live where you saved/shared them — delete those copies separately.</li>
-      </ul>
-      <h2>3. Request deletion from the developer</h2>
-      <ul>
-        <li>If you believe we hold personal data about you outside the device (for example support email correspondence), contact us via the Play Store listing or <a href="support.html">Support</a>.</li>
-        <li>Include the app name (<strong>KnoSpar</strong>), your contact email, and what you want deleted.</li>
-        <li>We will respond within a reasonable time and delete or anonymize developer-held personal data when required, except where we must retain it for legal reasons.</li>
-      </ul>
-      <h2>4. Advertising partners</h2>
-      <ul>
-        <li>Ad networks such as Google AdMob may process device identifiers under their own policies. See Google’s tools and privacy policy for ad-related choices.</li>
-      </ul>
-    </article>
-    <p class="footer">Hosted for Google Play / AdMob · Last updated 31 October 2026</p>
-  </div>
+<body class="page-inner">
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="KnoSpar home">
+        <img src="assets/logo.png" alt="" width="44" height="44">
+        <span class="brand-text">
+          <span class="brand-name">KnoSpar</span>
+          <span class="brand-tag">Learn. Practice. Grow.</span>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" class="active">Home</a>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#benefits">Benefits</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="support.html">Contact</a>
+      </nav>
+      <a class="btn btn-primary nav-cta btn-coming" href="index.html#download">Coming Soon</a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="drawer-overlay" id="drawer-overlay" hidden></div>
+  <aside class="drawer" id="mobile-drawer" aria-label="Mobile navigation" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="drawer-brand">
+        <img src="assets/logo.png" alt="" width="36" height="36">
+        KnoSpar
+      </div>
+      <button class="drawer-close" id="drawer-close" type="button" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <nav class="drawer-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#features">Features</a>
+      <a href="index.html#benefits">Benefits</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="support.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="deletion.html">Data Deletion</a>
+    </nav>
+    <a class="btn btn-primary btn-block btn-coming" href="index.html#download">Coming Soon</a>
+  </aside>
+  <main class="page-inner-main">
+    <div class="container">
+      <article class="page-panel">
+        <h1>Delete Your Data</h1>
+        <p>KnoSpar primarily stores information on your device. Use the steps below to permanently remove local app data.</p>
+        <div class="page-steps">
+          <h2>To permanently remove application data:</h2>
+          <ol>
+            <li>Open Android <strong>Settings → Apps → KnoSpar → Storage → Clear data</strong>.</li>
+            <li>Or uninstall <strong>KnoSpar</strong> to remove local app data.</li>
+            <li>Remove any files you exported/shared outside the app separately.</li>
+          </ol>
+        </div>
+        <p>If you contacted support by email and want that correspondence deleted, email <strong>support@knospar.app</strong> with the app name and your request.</p>
+        <p><em>If cloud sync is added in a future release, this page will be updated with remote deletion instructions.</em></p>
+      </article>
+    </div>
+  </main>
+  <footer class="page-inner-footer">
+    <div class="container footer-bottom">
+      <p>&copy; 2026 KnoSpar. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html">Contact</a>
+        <a href="deletion.html">Data Deletion</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

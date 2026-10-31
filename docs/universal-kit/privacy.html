@@ -1,63 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy — UniversalKit</title>
-  <meta name="description" content="Privacy Policy — UniversalKit" />
-  <link rel="stylesheet" href="../styles.css" />
+  <meta name="description" content="Privacy Policy for UniversalKit.">
+  <meta name="theme-color" content="#1D4ED8">
+  <link rel="canonical" href="https://seng2hs.github.io/app-legal/universal-kit/privacy.html">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-  <div class="wrap">
-    <nav class="nav"><a class="brand" href="../index.html">app-legal<small>UniversalKit</small></a>
-        <div class="nav-links">
-          <a href="index.html">About</a>
-          <a href="privacy.html">Privacy</a>
-          <a href="terms.html">Terms</a>
-          <a href="support.html">Support</a>
-          <a href="deletion.html">Deletion</a>
-        </div></nav>
-    
-    <article class="card">
-      <div class="badge">UniversalKit</div>
-      <h1>Privacy Policy</h1>
-      <p class="meta">Last updated: 31 October 2026</p>
-      <p>UniversalKit is a collection of everyday utility tools that run on your device.</p>
-      <h2>1. Information we store</h2>
-      <ul>
-        <li>Tool preferences and content you create are stored locally on your device unless a feature explicitly syncs elsewhere.</li>
-        <li>We do not require an account to use the core app experience described here.</li>
-        <li>We do not sell your personal information.</li>
-      </ul>
-      <h2>2. Permissions</h2>
-      <ul>
-        <li>Internet — if the app uses online features, ads, or updates.</li>
-<li>Device features — only when a tool you open needs them (for example camera or files), and only after you use that tool.</li>
-      </ul>
-      
-        <h2>3. Advertising</h2>
+<body class="page-inner">
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="UniversalKit home">
+        <img src="assets/logo.png" alt="" width="44" height="44">
+        <span class="brand-text">
+          <span class="brand-name">UniversalKit</span>
+          <span class="brand-tag">Everyday tools. One kit.</span>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" class="active">Home</a>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#benefits">Benefits</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="support.html">Contact</a>
+      </nav>
+      <a class="btn btn-primary nav-cta btn-coming" href="index.html#download">Coming Soon</a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="drawer-overlay" id="drawer-overlay" hidden></div>
+  <aside class="drawer" id="mobile-drawer" aria-label="Mobile navigation" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="drawer-brand">
+        <img src="assets/logo.png" alt="" width="36" height="36">
+        UniversalKit
+      </div>
+      <button class="drawer-close" id="drawer-close" type="button" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <nav class="drawer-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#features">Features</a>
+      <a href="index.html#benefits">Benefits</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="support.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="deletion.html">Data Deletion</a>
+    </nav>
+    <a class="btn btn-primary btn-block btn-coming" href="index.html#download">Coming Soon</a>
+  </aside>
+  <main class="page-inner-main">
+    <div class="container">
+      <article class="page-panel">
+        <h1>Privacy Policy</h1>
+        <p class="page-meta"><strong>Effective Date:</strong> October 2026</p>
+        <p>UniversalKit ("we", "our", or "us") respects your privacy. UniversalKit is designed with a Privacy First approach. Your information stays under your control on your device whenever possible.</p>
+        <h2>Information We Collect</h2>
+        <h3>Information You Enter</h3>
+        <p>This information is stored on your device:</p>
         <ul>
-          <li>Store builds of UniversalKit may show ads through Google AdMob.</li>
-          <li>AdMob/Google may collect device identifiers and usage data under Google’s policies.</li>
-          <li>Google Privacy Policy: <a href="https://policies.google.com/privacy" rel="noopener">https://policies.google.com/privacy</a></li>
+          <li>Tool preferences and settings</li>
+          <li>Content you create inside tools</li>
+          <li>Optional imported/exported files</li>
+          <li>App configuration</li>
         </ul>
-      <h2>4. Children’s privacy</h2>
-      <ul>
-        <li>UniversalKit is intended for general users / educators as described in the store listing.</li>
-        <li>Do not enter sensitive personal data about children beyond what a feature clearly needs.</li>
-      </ul>
-      <h2>5. Sharing</h2>
-      <ul>
-        <li>Your content stays on your device unless you export, share, or use an online feature that sends data.</li>
-      </ul>
-      <h2>6. Contact</h2>
-      <ul>
-        <li>Questions: use <a href="support.html">Support</a> or the contact details on the Google Play listing.</li>
-        <li>Data deletion: see <a href="deletion.html">Account / Data Deletion</a>.</li>
-      </ul>
-      <p>We may update this policy when the app changes. Continued use means you accept the updated policy.</p>
-    </article>
-    <p class="footer">Hosted for Google Play / AdMob · Last updated 31 October 2026</p>
-  </div>
+        <h2>Permissions</h2>
+        <ul>
+          <li><strong>Camera / files:</strong> Only when you open a tool that needs them.</li>
+          <li><strong>Internet:</strong> Ads (if enabled), updates, and optional online tools.</li>
+        </ul>
+        <h2>Advertising</h2>
+        <p>Store / free builds may display Google AdMob advertisements. Google may collect advertising ID, device information, and ad performance metrics. See Google's Privacy Policy for details.</p>
+        <h2>Purchases</h2>
+        <p>If paid upgrades are offered, payments are processed by Google Play Billing. We do not store raw payment card details.</p>
+        <h2>Data Storage</h2>
+        <p>Core app data is stored locally on your device. We do not operate a required cloud account for basic use described here.</p>
+        <h2>Data Sharing</h2>
+        <p>We do not sell your personal information. Content leaves your device only when you export/share it or use a feature that clearly needs internet.</p>
+        <h2>Children's Privacy</h2>
+        <p>UniversalKit is intended for general users as described on the store listing. Do not enter sensitive children's data beyond what a feature needs.</p>
+        <h2>Changes</h2>
+        <p>This Privacy Policy may be updated over time. Continued use after updates means you accept the revised policy.</p>
+        <h2>Contact</h2>
+        <p>Email <strong>support@universalkit.app</strong> or visit our <a href="support.html">Contact</a> page.</p>
+      </article>
+    </div>
+  </main>
+  <footer class="page-inner-footer">
+    <div class="container footer-bottom">
+      <p>&copy; 2026 UniversalKit. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html">Contact</a>
+        <a href="deletion.html">Data Deletion</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

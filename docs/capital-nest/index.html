@@ -1,36 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CapitalNest — Legal</title>
-  <meta name="description" content="CapitalNest — Legal" />
-  <link rel="stylesheet" href="../styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CapitalNest — Your Personal Wealth Companion</title>
+  <meta name="description" content="Track fixed deposits, RD, loans, lending, cash flow, income, expenses and portfolio — private money manager that stays on your device.">
+  <meta name="keywords" content="fixed deposit, fd tracker, rd tracker, wealth manager, finance tracker, money manager, CapitalNest">
+  <meta name="author" content="CapitalNest">
+  <meta name="theme-color" content="#0F5D31">
+  <link rel="canonical" href="https://seng2hs.github.io/app-legal/capital-nest/">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://seng2hs.github.io/app-legal/capital-nest/">
+  <meta property="og:title" content="CapitalNest — Your Personal Wealth Companion">
+  <meta property="og:description" content="Track fixed deposits, RD, loans, lending, cash flow, income, expenses and portfolio — private money manager that stays on your device.">
+  <meta property="og:image" content="https://seng2hs.github.io/app-legal/capital-nest/assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "CapitalNest",
+        "url": "https://seng2hs.github.io/app-legal/capital-nest/",
+        "logo": "https://seng2hs.github.io/app-legal/capital-nest/assets/logo.png",
+        "email": "support@capitalnest.app"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "CapitalNest",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Android",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+        "description": 'Track fixed deposits, RD, loans, lending, cash flow, income, expenses and portfolio — private money manager that stays on your device.'
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": 'Is my finance data stored in the cloud?',
+            "acceptedAnswer": { "@type": "Answer", "text": 'Core records are designed to stay on your device. See the Privacy Policy for details.' }
+          },
+          {
+            "@type": "Question",
+            "name": 'How do I delete my data?',
+            "acceptedAnswer": { "@type": "Answer", "text": 'Clear app storage or uninstall CapitalNest. See the Data Deletion page.' }
+          },
+          {
+            "@type": "Question",
+            "name": 'Does CapitalNest show ads?',
+            "acceptedAnswer": { "@type": "Answer", "text": 'Store builds may show ads. Details are in the Privacy Policy.' }
+          },
+          {
+            "@type": "Question",
+            "name": 'How do I contact support?',
+            "acceptedAnswer": { "@type": "Answer", "text": 'Use the Contact page with your device model and a short description of the issue.' }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-  <div class="wrap">
-    <nav class="nav"><a class="brand" href="../index.html">app-legal<small>CapitalNest</small></a>
-        <div class="nav-links">
-          <a href="index.html">About</a>
-          <a href="privacy.html">Privacy</a>
-          <a href="terms.html">Terms</a>
-          <a href="support.html">Support</a>
-          <a href="deletion.html">Deletion</a>
-        </div></nav>
-    
-    <div class="card hero">
-      <div class="badge">App legal pages</div>
-      <h1>CapitalNest</h1>
-      <p>Personal finance and capital tracking</p>
-      <p>CapitalNest helps you track and organize personal finance information on your device.</p>
-      <p>
-        <a href="privacy.html">Privacy Policy</a> ·
-        <a href="terms.html">Terms of Use</a> ·
-        <a href="support.html">Support</a> ·
-        <a href="deletion.html">Data Deletion</a>
-      </p>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="CapitalNest home">
+        <img src="assets/logo.png" alt="" width="44" height="44">
+        <span class="brand-text">
+          <span class="brand-name">CapitalNest</span>
+          <span class="brand-tag">Your Personal Wealth Companion</span>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" class="active">Home</a>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#benefits">Benefits</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="support.html">Contact</a>
+      </nav>
+      <a class="btn btn-primary nav-cta btn-coming" href="index.html#download">Coming Soon</a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
     </div>
-    <p class="footer">Hosted for Google Play / AdMob · Last updated 31 October 2026</p>
-  </div>
+  </header>
+
+  <div class="drawer-overlay" id="drawer-overlay" hidden></div>
+  <aside class="drawer" id="mobile-drawer" aria-label="Mobile navigation" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="drawer-brand">
+        <img src="assets/logo.png" alt="" width="36" height="36">
+        CapitalNest
+      </div>
+      <button class="drawer-close" id="drawer-close" type="button" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <nav class="drawer-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#features">Features</a>
+      <a href="index.html#benefits">Benefits</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="support.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="deletion.html">Data Deletion</a>
+    </nav>
+    <a class="btn btn-primary btn-block btn-coming" href="index.html#download">Coming Soon</a>
+  </aside>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-glow"></div>
+        <div class="hero-glow-2"></div>
+      </div>
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <div class="hero-badge">Offline Finance · Privacy First</div>
+          <h1 class="hero-title">Track.<br>Grow.<br><span class="accent">Wealth.</span></h1>
+          <p class="hero-sub">Offline personal finance and wealth manager.</p>
+          <p class="hero-desc">Track fixed deposits, RD, loans, lending, cash flow, income, expenses and portfolio — private money manager that stays on your device.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-coming" href="#download" id="download">Coming Soon</a>
+            <a class="btn btn-secondary" href="#features">Explore Features</a>
+          </div>
+        </div>
+        <div class="hero-visual reveal reveal-delay-2">
+          <div class="phone">
+            <div class="phone-screen" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(160deg,#0F5D31,#0A3F22);color:#fff;min-height:420px;padding:2rem;text-align:center;">
+              <div>
+                <img src="assets/logo.png" alt="" width="72" height="72" style="margin:0 auto 1rem;border-radius:16px;">
+                <h2 style="font-size:1.4rem;margin-bottom:.5rem;">CapitalNest</h2>
+                <p style="opacity:.9;">Your Personal Wealth Companion</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust" aria-label="Trust indicators">
+      <div class="container trust-grid">
+        <div class="trust-item reveal">
+          <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <span>Offline First</span>
+        </div>
+        <div class="trust-item reveal reveal-delay-2">
+          <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg></div>
+          <span>Private on Device</span>
+        </div>
+        <div class="trust-item reveal reveal-delay-3">
+          <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4 4 0 01.5-7.9A5 5 0 0117 9a3.5 3.5 0 01.5 7H7z"/></svg></div>
+          <span>FD & RD Tracking</span>
+        </div>
+        <div class="trust-item reveal reveal-delay-1">
+          <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.5 5.5l2.5 2.5M16 16l2.5 2.5M18.5 5.5L16 8M8 16l-2.5 2.5"/></svg></div>
+          <span>Loan Tracker</span>
+        </div>
+        <div class="trust-item reveal reveal-delay-2">
+          <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V9l4 2 4-5 4 4 4-3"/><path d="M4 19h16"/></svg></div>
+          <span>Cash Flow</span>
+        </div>
+        <div class="trust-item reveal reveal-delay-3">
+          <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 10-14h-7l1-6z"/></svg></div>
+          <span>Portfolio View</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Features</span>
+          <h2 class="section-title">Everything You Need</h2>
+          <p class="section-desc">Track fixed deposits, RD, loans, lending, cash flow, income, expenses and portfolio — private money manager that stays on your device.</p>
+        </div>
+        <div class="features-grid">
+          <article class="feature-card reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></div>
+            <h3>FD Tracker</h3>
+            <p>Track fixed deposits, maturity and interest clearly.</p>
+          </article>
+          <article class="feature-card reveal reveal-delay-2">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></div>
+            <h3>RD Tracker</h3>
+            <p>Follow recurring deposits and projected returns.</p>
+          </article>
+          <article class="feature-card reveal reveal-delay-3">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></div>
+            <h3>Loans & Lending</h3>
+            <p>Keep borrow and lend records organized.</p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></div>
+            <h3>Cash Flow</h3>
+            <p>See income and expense movement in one place.</p>
+          </article>
+          <article class="feature-card reveal reveal-delay-2">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></div>
+            <h3>Portfolio</h3>
+            <p>Understand distribution across your wealth buckets.</p>
+          </article>
+          <article class="feature-card reveal reveal-delay-3">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></div>
+            <h3>Calculators</h3>
+            <p>FD/RD interest helpers when you need a quick check.</p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></div>
+            <h3>Local Storage</h3>
+            <p>Records stay on-device by default.</p>
+          </article>
+          <article class="feature-card reveal reveal-delay-2">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></div>
+            <h3>Clean Reports</h3>
+            <p>Simple insights without a noisy dashboard.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="benefits">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Why CapitalNest</span>
+          <h2 class="section-title">Built for Everyone. Designed for You.</h2>
+          <p class="section-desc">Whether you need an FD tracker, RD tracker, loan tracker or a full personal finance wealth manager, CapitalNest keeps everything organized.</p>
+        </div>
+        <div class="benefit-cards">
+          <article class="benefit-card reveal">
+            <h3>Privacy First</h3>
+            <p>Financial records stay on your device. We don’t sell your data.</p>
+          </article>
+          <article class="benefit-card reveal reveal-delay-1">
+            <h3>Offline Storage</h3>
+            <p>Works without forcing a cloud account for core use.</p>
+          </article>
+          <article class="benefit-card reveal reveal-delay-2">
+            <h3>Smart Insights</h3>
+            <p>Clear reports help you act before maturities and dues.</p>
+          </article>
+          <article class="benefit-card reveal reveal-delay-3">
+            <h3>Simple Interface</h3>
+            <p>Calm UI so reviewing wealth feels effortless.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-desc">Answers based on our Privacy Policy, Terms, Support and Data Deletion guidance.</p>
+        </div>
+        <div class="faq-list reveal">
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">Is my finance data stored in the cloud?</button>
+            <div class="faq-answer"><p>Core records are designed to stay on your device. See the Privacy Policy for details.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">How do I delete my data?</button>
+            <div class="faq-answer"><p>Clear app storage or uninstall CapitalNest. See the Data Deletion page.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">Does CapitalNest show ads?</button>
+            <div class="faq-answer"><p>Store builds may show ads. Details are in the Privacy Policy.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">How do I contact support?</button>
+            <div class="faq-answer"><p>Use the Contact page with your device model and a short description of the issue.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner" id="download">
+      <div class="container">
+        <div class="cta-inner reveal">
+          <div class="cta-copy">
+            <div class="cta-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 14.9 7.2 17l.9-5.4L4.2 7.7l5.4-.8L12 2z"/></svg>
+            </div>
+            <div>
+              <h3>Get CapitalNest</h3>
+              <p>Coming soon on Google Play. Privacy Policy and Terms are already available for store listing.</p>
+            </div>
+          </div>
+          <div class="cta-action">
+            <a class="btn btn-primary btn-coming" href="support.html">Contact Support</a>
+            <small>Coming soon on Google Play</small>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="" width="36" height="36">
+          <strong>CapitalNest</strong>
+        </div>
+        <p>Offline personal finance and wealth manager.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#benefits">Benefits</a>
+        <a href="index.html#faq">FAQ</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="deletion.html">Data Deletion</a>
+        <a href="support.html">Contact</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 CapitalNest. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

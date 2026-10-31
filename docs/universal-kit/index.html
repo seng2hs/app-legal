@@ -1,36 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>UniversalKit — Legal</title>
-  <meta name="description" content="UniversalKit — Legal" />
-  <link rel="stylesheet" href="../styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniversalKit — Everyday tools. One kit.</title>
+  <meta name="description" content="UniversalKit bundles useful day-to-day tools in one Android app — open what you need, get it done, and keep preferences on your device.">
+  <meta name="keywords" content="utilities, toolkit, tools app, everyday utilities, UniversalKit">
+  <meta name="author" content="UniversalKit">
+  <meta name="theme-color" content="#1D4ED8">
+  <link rel="canonical" href="https://seng2hs.github.io/app-legal/universal-kit/">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://seng2hs.github.io/app-legal/universal-kit/">
+  <meta property="og:title" content="UniversalKit — Everyday tools. One kit.">
+  <meta property="og:description" content="UniversalKit bundles useful day-to-day tools in one Android app — open what you need, get it done, and keep preferences on your device.">
+  <meta property="og:image" content="https://seng2hs.github.io/app-legal/universal-kit/assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "UniversalKit",
+        "url": "https://seng2hs.github.io/app-legal/universal-kit/",
+        "logo": "https://seng2hs.github.io/app-legal/universal-kit/assets/logo.png",
+        "email": "support@universalkit.app"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "UniversalKit",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+        "description": 'UniversalKit bundles useful day-to-day tools in one Android app — open what you need, get it done, and keep preferences on your device.'
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": 'Do all tools need internet?',
+            "acceptedAnswer": { "@type": "Answer", "text": 'No. Many utilities are offline friendly. Internet is used for ads/updates or online-specific tools.' }
+          },
+          {
+            "@type": "Question",
+            "name": 'How do I delete my data?',
+            "acceptedAnswer": { "@type": "Answer", "text": 'Clear app storage or uninstall UniversalKit. See Data Deletion.' }
+          },
+          {
+            "@type": "Question",
+            "name": 'Why does a tool ask for permission?',
+            "acceptedAnswer": { "@type": "Answer", "text": 'Only tools that need camera or files will request those permissions when you use them.' }
+          },
+          {
+            "@type": "Question",
+            "name": 'How do I contact support?',
+            "acceptedAnswer": { "@type": "Answer", "text": 'Use the Contact page and mention which tool had the issue.' }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-  <div class="wrap">
-    <nav class="nav"><a class="brand" href="../index.html">app-legal<small>UniversalKit</small></a>
-        <div class="nav-links">
-          <a href="index.html">About</a>
-          <a href="privacy.html">Privacy</a>
-          <a href="terms.html">Terms</a>
-          <a href="support.html">Support</a>
-          <a href="deletion.html">Deletion</a>
-        </div></nav>
-    
-    <div class="card hero">
-      <div class="badge">App legal pages</div>
-      <h1>UniversalKit</h1>
-      <p>Everyday utility toolkit</p>
-      <p>UniversalKit is a collection of everyday utility tools that run on your device.</p>
-      <p>
-        <a href="privacy.html">Privacy Policy</a> ·
-        <a href="terms.html">Terms of Use</a> ·
-        <a href="support.html">Support</a> ·
-        <a href="deletion.html">Data Deletion</a>
-      </p>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="UniversalKit home">
+        <img src="assets/logo.png" alt="" width="44" height="44">
+        <span class="brand-text">
+          <span class="brand-name">UniversalKit</span>
+          <span class="brand-tag">Everyday tools. One kit.</span>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" class="active">Home</a>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#benefits">Benefits</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="support.html">Contact</a>
+      </nav>
+      <a class="btn btn-primary nav-cta btn-coming" href="index.html#download">Coming Soon</a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
     </div>
-    <p class="footer">Hosted for Google Play / AdMob · Last updated 31 October 2026</p>
-  </div>
+  </header>
+
+  <div class="drawer-overlay" id="drawer-overlay" hidden></div>
+  <aside class="drawer" id="mobile-drawer" aria-label="Mobile navigation" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="drawer-brand">
+        <img src="assets/logo.png" alt="" width="36" height="36">
+        UniversalKit
+      </div>
+      <button class="drawer-close" id="drawer-close" type="button" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <nav class="drawer-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#features">Features</a>
+      <a href="index.html#benefits">Benefits</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="support.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="deletion.html">Data Deletion</a>
+    </nav>
+    <a class="btn btn-primary btn-block btn-coming" href="index.html#download">Coming Soon</a>
+  </aside>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-glow"></div>
+        <div class="hero-glow-2"></div>
+      </div>
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <div class="hero-badge">Utilities · Offline Friendly</div>
+          <h1 class="hero-title">Tools.<br>Ready.<br><span class="accent">Anywhere.</span></h1>
+          <p class="hero-sub">A practical kit of everyday utilities.</p>
+          <p class="hero-desc">UniversalKit bundles useful day-to-day tools in one Android app — open what you need, get it done, and keep preferences on your device.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-coming" href="#download" id="download">Coming Soon</a>
+            <a class="btn btn-secondary" href="#features">Explore Features</a>
+          </div>
+        </div>
+        <div class="hero-visual reveal reveal-delay-2">
+          <div class="phone">
+            <div class="phone-screen" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(160deg,#1D4ED8,#1E3A8A);color:#fff;min-height:420px;padding:2rem;text-align:center;">
+              <div>
+                <img src="assets/logo.png" alt="" width="72" height="72" style="margin:0 auto 1rem;border-radius:16px;">
+                <h2 style="font-size:1.4rem;margin-bottom:.5rem;">UniversalKit</h2>
+                <p style="opacity:.9;">Everyday tools. One kit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust" aria-label="Trust indicators">
+      <div class="container trust-grid">
+        <div class="trust-item reveal">
+          <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <span>Multi Tools</span>
+        </div>
+        <div class="trust-item reveal reveal-delay-2">
+          <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg></div>
+          <span>On-device Prefs</span>
+        </div>
+        <div class="trust-item reveal reveal-delay-3">
+          <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4 4 0 01.5-7.9A5 5 0 0117 9a3.5 3.5 0 01.5 7H7z"/></svg></div>
+          <span>Fast Launch</span>
+        </div>
+        <div class="trust-item reveal reveal-delay-1">
+          <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.5 5.5l2.5 2.5M16 16l2.5 2.5M18.5 5.5L16 8M8 16l-2.5 2.5"/></svg></div>
+          <span>Simple UI</span>
+        </div>
+        <div class="trust-item reveal reveal-delay-2">
+          <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V9l4 2 4-5 4 4 4-3"/><path d="M4 19h16"/></svg></div>
+          <span>Optional Ads</span>
+        </div>
+        <div class="trust-item reveal reveal-delay-3">
+          <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 10-14h-7l1-6z"/></svg></div>
+          <span>Play Updates</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Features</span>
+          <h2 class="section-title">Everything You Need</h2>
+          <p class="section-desc">UniversalKit bundles useful day-to-day tools in one Android app — open what you need, get it done, and keep preferences on your device.</p>
+        </div>
+        <div class="features-grid">
+          <article class="feature-card reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></div>
+            <h3>Utility Bundle</h3>
+            <p>Multiple everyday tools in one install.</p>
+          </article>
+          <article class="feature-card reveal reveal-delay-2">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></div>
+            <h3>Quick Access</h3>
+            <p>Jump to the tool you need without hunting.</p>
+          </article>
+          <article class="feature-card reveal reveal-delay-3">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></div>
+            <h3>Local Preferences</h3>
+            <p>Your settings stay on the device.</p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></div>
+            <h3>Offline Friendly</h3>
+            <p>Many tools work without constant connectivity.</p>
+          </article>
+          <article class="feature-card reveal reveal-delay-2">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></div>
+            <h3>Permission Light</h3>
+            <p>Sensitive permissions only when a tool needs them.</p>
+          </article>
+          <article class="feature-card reveal reveal-delay-3">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></div>
+            <h3>Clean Design</h3>
+            <p>A consistent UI across the kit.</p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></div>
+            <h3>Share Outputs</h3>
+            <p>Export or share results when a tool supports it.</p>
+          </article>
+          <article class="feature-card reveal reveal-delay-2">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></div>
+            <h3>Regular Updates</h3>
+            <p>Improvements via Google Play.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="benefits">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Why UniversalKit</span>
+          <h2 class="section-title">Built for Daily Tasks. Designed to Stay Light.</h2>
+          <p class="section-desc">UniversalKit is for people who want handy tools without installing ten separate apps.</p>
+        </div>
+        <div class="benefit-cards">
+          <article class="benefit-card reveal">
+            <h3>Privacy Aware</h3>
+            <p>Data stays local unless a tool explicitly shares.</p>
+          </article>
+          <article class="benefit-card reveal reveal-delay-1">
+            <h3>Less App Clutter</h3>
+            <p>One kit instead of many one-purpose installs.</p>
+          </article>
+          <article class="benefit-card reveal reveal-delay-2">
+            <h3>Clear Permissions</h3>
+            <p>Camera/files only when you open tools that need them.</p>
+          </article>
+          <article class="benefit-card reveal reveal-delay-3">
+            <h3>Support Ready</h3>
+            <p>Contact us if a tool misbehaves.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-desc">Answers based on our Privacy Policy, Terms, Support and Data Deletion guidance.</p>
+        </div>
+        <div class="faq-list reveal">
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">Do all tools need internet?</button>
+            <div class="faq-answer"><p>No. Many utilities are offline friendly. Internet is used for ads/updates or online-specific tools.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">How do I delete my data?</button>
+            <div class="faq-answer"><p>Clear app storage or uninstall UniversalKit. See Data Deletion.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">Why does a tool ask for permission?</button>
+            <div class="faq-answer"><p>Only tools that need camera or files will request those permissions when you use them.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">How do I contact support?</button>
+            <div class="faq-answer"><p>Use the Contact page and mention which tool had the issue.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner" id="download">
+      <div class="container">
+        <div class="cta-inner reveal">
+          <div class="cta-copy">
+            <div class="cta-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 14.9 7.2 17l.9-5.4L4.2 7.7l5.4-.8L12 2z"/></svg>
+            </div>
+            <div>
+              <h3>Get UniversalKit</h3>
+              <p>Coming soon on Google Play. Privacy Policy and Terms are already available for store listing.</p>
+            </div>
+          </div>
+          <div class="cta-action">
+            <a class="btn btn-primary btn-coming" href="support.html">Contact Support</a>
+            <small>Coming soon on Google Play</small>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="" width="36" height="36">
+          <strong>UniversalKit</strong>
+        </div>
+        <p>A practical kit of everyday utilities.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#benefits">Benefits</a>
+        <a href="index.html#faq">FAQ</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="deletion.html">Data Deletion</a>
+        <a href="support.html">Contact</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 UniversalKit. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
