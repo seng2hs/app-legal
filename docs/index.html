@@ -44,6 +44,7 @@
       padding: 18px;
       background: var(--card);
       border: 1px solid var(--line);
+      border-left: 4px solid var(--card-accent, var(--brand));
       border-radius: 18px;
       text-decoration: none;
       color: inherit;
@@ -51,7 +52,7 @@
     }
     .hub-card:hover {
       transform: translateY(-2px);
-      box-shadow: 0 14px 30px rgba(15, 93, 49, .10);
+      box-shadow: 0 14px 30px color-mix(in srgb, var(--card-accent, var(--brand)) 18%, transparent);
     }
     .hub-card img { border-radius: 12px; }
     .hub-card strong { display: block; font-size: 1.05rem; }
@@ -65,35 +66,35 @@
     <h1>App Legal</h1>
     <p class="lead">CapitalNest-style product and legal pages for every Seng2HS Android app — Privacy, Terms, Support and Data Deletion.</p>
     <div class="grid">
-      <a class="hub-card" href="chalkboard/">
+      <a class="hub-card" href="chalkboard/" style="--card-accent:#155EE1">
         <img src="chalkboard/assets/logo.png" alt="" width="56" height="56">
         <div>
           <strong>ChalkBoard</strong>
           <span>Teach. Draw. Share.</span>
         </div>
       </a>
-      <a class="hub-card" href="capital-nest/">
+      <a class="hub-card" href="capital-nest/" style="--card-accent:#1B5E20">
         <img src="capital-nest/assets/logo.png" alt="" width="56" height="56">
         <div>
           <strong>CapitalNest</strong>
           <span>Your Personal Wealth Companion</span>
         </div>
       </a>
-      <a class="hub-card" href="knospar/">
+      <a class="hub-card" href="knospar/" style="--card-accent:#0F3D3A">
         <img src="knospar/assets/logo.png" alt="" width="56" height="56">
         <div>
           <strong>KnoSpar</strong>
           <span>Learn. Practice. Grow.</span>
         </div>
       </a>
-      <a class="hub-card" href="paper-shelf/">
+      <a class="hub-card" href="paper-shelf/" style="--card-accent:#2563EB">
         <img src="paper-shelf/assets/logo.png" alt="" width="56" height="56">
         <div>
           <strong>PaperShelf</strong>
           <span>Your documents. Your shelf.</span>
         </div>
       </a>
-      <a class="hub-card" href="universal-kit/">
+      <a class="hub-card" href="universal-kit/" style="--card-accent:#1E5EFF">
         <img src="universal-kit/assets/logo.png" alt="" width="56" height="56">
         <div>
           <strong>UniversalKit</strong>

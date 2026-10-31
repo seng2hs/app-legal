@@ -27,15 +27,16 @@ APPS = [
         "domain": f"{BASE}/chalkboard",
         "email": "support@chalkboard.app",
         "logo": Path(r"D:\Work\Senthil\ChalkBoard\design\brand\chalkboard_logo_icon.png"),
-        "theme": "#0F766E",
-        "theme_dark": "#115E59",
-        "theme_light": "#0D9488",
-        "accent": "#14B8A6",
+        # AppColors + launcher blue mark
+        "theme": "#155EE1",
+        "theme_dark": "#1248B0",
+        "theme_light": "#3B82F6",
+        "accent": "#0F766E",
         "accent_soft": "#E6F4F2",
         "bg": "#F7F5F2",
         "bg_muted": "#F1EEE9",
         "border": "#E7E2DC",
-        "shadow_rgb": "15, 118, 110",
+        "shadow_rgb": "21, 94, 225",
         "hero_badge": "Live Lessons · Screen Share Ready",
         "hero_title_html": 'Teach.<br>Draw.<br><span class="accent">Share.</span>',
         "hero_sub": "The teacher whiteboard built for live classes.",
@@ -116,15 +117,16 @@ APPS = [
         "domain": f"{BASE}/capital-nest",
         "email": "support@capitalnest.app",
         "logo": Path(r"D:\Work\Senthil\CapitalNestApp\capitalnestapp\assets\branding\app_icon.png"),
-        "theme": "#0F5D31",
-        "theme_dark": "#0A3F22",
-        "theme_light": "#147A40",
-        "accent": "#24A148",
-        "accent_soft": "#E8F8EE",
-        "bg": "#F8FAF9",
-        "bg_muted": "#F1F5F3",
-        "border": "#E2EBE5",
-        "shadow_rgb": "15, 93, 49",
+        # AppColors forest / mint / action green
+        "theme": "#1B5E20",
+        "theme_dark": "#004D40",
+        "theme_light": "#2E7D32",
+        "accent": "#43A047",
+        "accent_soft": "#E8F5E9",
+        "bg": "#F4F6F8",
+        "bg_muted": "#E9EEF2",
+        "border": "#DDE3E8",
+        "shadow_rgb": "27, 94, 32",
         "hero_badge": "Offline Finance · Privacy First",
         "hero_title_html": 'Track.<br>Grow.<br><span class="accent">Wealth.</span>',
         "hero_sub": "Offline personal finance and wealth manager.",
@@ -205,15 +207,16 @@ APPS = [
         "domain": f"{BASE}/knospar",
         "email": "support@knospar.app",
         "logo": Path(r"D:\Work\Senthil\KnoSpar\assets\brand\play_store_icon_512.png"),
-        "theme": "#4F46E5",
-        "theme_dark": "#3730A3",
-        "theme_light": "#6366F1",
-        "accent": "#818CF8",
-        "accent_soft": "#EEF2FF",
-        "bg": "#F8F9FC",
-        "bg_muted": "#F1F3F9",
-        "border": "#E2E5F0",
-        "shadow_rgb": "79, 70, 229",
+        # Cosmic / logo: deep teal + cyan + spark lime
+        "theme": "#0F3D3A",
+        "theme_dark": "#0B1020",
+        "theme_light": "#1A5C57",
+        "accent": "#06B6D4",
+        "accent_soft": "#E0F7FA",
+        "bg": "#F4F8F8",
+        "bg_muted": "#E8F1F1",
+        "border": "#D5E3E2",
+        "shadow_rgb": "15, 61, 58",
         "hero_badge": "Knowledge Tools · Private Learning",
         "hero_title_html": 'Learn.<br>Practice.<br><span class="accent">Grow.</span>',
         "hero_sub": "Knowledge tools that stay on your device.",
@@ -294,15 +297,16 @@ APPS = [
         "domain": f"{BASE}/paper-shelf",
         "email": "support@papershelf.app",
         "logo": Path(r"D:\Work\Senthil\PaperShelf\assets\branding\logo.png"),
-        "theme": "#B45309",
-        "theme_dark": "#92400E",
-        "theme_light": "#D97706",
-        "accent": "#F59E0B",
-        "accent_soft": "#FFFBEB",
-        "bg": "#FFFCF7",
-        "bg_muted": "#F7F1E8",
-        "border": "#EDE4D5",
-        "shadow_rgb": "180, 83, 9",
+        # AppColors primary blue + secondary emerald
+        "theme": "#2563EB",
+        "theme_dark": "#1D4ED8",
+        "theme_light": "#60A5FA",
+        "accent": "#10B981",
+        "accent_soft": "#EFF6FF",
+        "bg": "#F8FAFC",
+        "bg_muted": "#F1F5F9",
+        "border": "#E2E8F0",
+        "shadow_rgb": "37, 99, 235",
         "hero_badge": "Documents · Private Shelf",
         "hero_title_html": 'Keep.<br>Organize.<br><span class="accent">Read.</span>',
         "hero_sub": "A calm shelf for the papers that matter.",
@@ -382,15 +386,16 @@ APPS = [
         "domain": f"{BASE}/universal-kit",
         "email": "support@universalkit.app",
         "logo": Path(r"D:\Work\Senthil\UniversalKit\assets\brand\logo_b_1024.png"),
-        "theme": "#1D4ED8",
-        "theme_dark": "#1E3A8A",
-        "theme_light": "#2563EB",
-        "accent": "#3B82F6",
-        "accent_soft": "#EFF6FF",
-        "bg": "#F8FAFC",
-        "bg_muted": "#F1F5F9",
+        # UkColors brandPrimary + cyan accent
+        "theme": "#1E5EFF",
+        "theme_dark": "#1148C7",
+        "theme_light": "#4C7FFF",
+        "accent": "#1AD6FD",
+        "accent_soft": "#EAF1FF",
+        "bg": "#F6F8FC",
+        "bg_muted": "#EAF1FF",
         "border": "#E2E8F0",
-        "shadow_rgb": "29, 78, 216",
+        "shadow_rgb": "30, 94, 255",
         "hero_badge": "Utilities · Offline Friendly",
         "hero_title_html": 'Tools.<br>Ready.<br><span class="accent">Anywhere.</span>',
         "hero_sub": "A practical kit of everyday utilities.",
@@ -1005,7 +1010,7 @@ def write_hub() -> None:
     cards = []
     for app in APPS:
         cards.append(
-            f"""      <a class="hub-card" href="{app['slug']}/">
+            f"""      <a class="hub-card" href="{app['slug']}/" style="--card-accent:{app['theme']}">
         <img src="{app['slug']}/assets/logo.png" alt="" width="56" height="56">
         <div>
           <strong>{app['name']}</strong>
@@ -1059,6 +1064,7 @@ def write_hub() -> None:
       padding: 18px;
       background: var(--card);
       border: 1px solid var(--line);
+      border-left: 4px solid var(--card-accent, var(--brand));
       border-radius: 18px;
       text-decoration: none;
       color: inherit;
@@ -1066,7 +1072,7 @@ def write_hub() -> None:
     }}
     .hub-card:hover {{
       transform: translateY(-2px);
-      box-shadow: 0 14px 30px rgba(15, 93, 49, .10);
+      box-shadow: 0 14px 30px color-mix(in srgb, var(--card-accent, var(--brand)) 18%, transparent);
     }}
     .hub-card img {{ border-radius: 12px; }}
     .hub-card strong {{ display: block; font-size: 1.05rem; }}
