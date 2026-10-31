@@ -185,8 +185,8 @@ ul {
   width: 44px;
   height: 44px;
   border-radius: 10px;
-  object-fit: cover;
-  background: var(--white);
+  object-fit: contain;
+  background: transparent;
 }
 
 .brand-text {
@@ -306,7 +306,8 @@ ul {
   width: 36px;
   height: 36px;
   border-radius: 8px;
-  object-fit: cover;
+  object-fit: contain;
+  background: transparent;
 }
 
 .drawer-close {
@@ -462,6 +463,58 @@ body.drawer-open {
   justify-content: center;
   align-items: flex-end;
   position: relative;
+}
+
+.hero-shot {
+  margin: 0;
+  width: min(100%, 320px);
+  filter: drop-shadow(0 28px 50px rgba(15, 35, 80, 0.28));
+}
+
+.hero-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.shots-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin: 2.25rem 0 1rem;
+  letter-spacing: 0.02em;
+}
+
+.shots-phones {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  align-items: end;
+}
+
+.shots-tablets {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.shot-card {
+  margin: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  background: transparent;
+  filter: drop-shadow(0 16px 32px rgba(15, 35, 80, 0.16));
+  transition: transform 0.25s ease;
+}
+
+.shot-card:hover {
+  transform: translateY(-4px);
+}
+
+.shot-card img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .phone {
@@ -1316,6 +1369,16 @@ body.drawer-open {
     order: -1;
   }
 
+  .hero-shot {
+    width: min(100%, 260px);
+  }
+
+  .shots-tablets {
+    grid-template-columns: 1fr;
+    max-width: 640px;
+    margin-inline: auto;
+  }
+
   .phone {
     width: min(100%, 240px);
   }
@@ -1382,6 +1445,12 @@ body.drawer-open {
 
   .preview-gallery {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .shots-phones {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    margin-inline: auto;
   }
 
   .footer-grid {
