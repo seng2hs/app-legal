@@ -26,6 +26,7 @@ APPS = [
         "tag": "Teach. Draw. Share.",
         "domain": f"{BASE}/chalkboard",
         "email": "support@chalkboard.app",
+        "logo": Path(r"D:\Work\Senthil\ChalkBoard\design\brand\chalkboard_logo_icon.png"),
         "theme": "#0F766E",
         "theme_dark": "#115E59",
         "theme_light": "#0D9488",
@@ -114,6 +115,7 @@ APPS = [
         "tag": "Your Personal Wealth Companion",
         "domain": f"{BASE}/capital-nest",
         "email": "support@capitalnest.app",
+        "logo": Path(r"D:\Work\Senthil\CapitalNestApp\capitalnestapp\assets\branding\app_icon.png"),
         "theme": "#0F5D31",
         "theme_dark": "#0A3F22",
         "theme_light": "#147A40",
@@ -202,6 +204,7 @@ APPS = [
         "tag": "Learn. Practice. Grow.",
         "domain": f"{BASE}/knospar",
         "email": "support@knospar.app",
+        "logo": Path(r"D:\Work\Senthil\KnoSpar\assets\brand\play_store_icon_512.png"),
         "theme": "#4F46E5",
         "theme_dark": "#3730A3",
         "theme_light": "#6366F1",
@@ -290,6 +293,7 @@ APPS = [
         "tag": "Your documents. Your shelf.",
         "domain": f"{BASE}/paper-shelf",
         "email": "support@papershelf.app",
+        "logo": Path(r"D:\Work\Senthil\PaperShelf\assets\branding\logo.png"),
         "theme": "#B45309",
         "theme_dark": "#92400E",
         "theme_light": "#D97706",
@@ -377,6 +381,7 @@ APPS = [
         "tag": "Everyday tools. One kit.",
         "domain": f"{BASE}/universal-kit",
         "email": "support@universalkit.app",
+        "logo": Path(r"D:\Work\Senthil\UniversalKit\assets\brand\logo_b_1024.png"),
         "theme": "#1D4ED8",
         "theme_dark": "#1E3A8A",
         "theme_light": "#2563EB",
@@ -483,33 +488,24 @@ def patch_css(css: str, app: dict) -> str:
     return css
 
 
-def make_logo(path: Path, app: dict) -> None:
-    size = 512
-    img = Image.new("RGBA", (size, size), (0, 0, 0, 0))
-    draw = ImageDraw.Draw(img)
-    # rounded square
-    pad = 24
-    draw.rounded_rectangle(
-        [pad, pad, size - pad, size - pad],
-        radius=110,
-        fill=app["theme"],
-    )
-    initials = "".join(w[0] for w in app["name"].split()[:2]).upper()
-    try:
-        font = ImageFont.truetype("arialbd.ttf", 180)
-    except Exception:
-        font = ImageFont.load_default()
-    bbox = draw.textbbox((0, 0), initials, font=font)
-    tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
-    draw.text(
-        ((size - tw) / 2, (size - th) / 2 - 10),
-        initials,
-        fill="white",
-        font=font,
-    )
-    path.parent.mkdir(parents=True, exist_ok=True)
-    img.save(path / "logo.png")
-    img.resize((64, 64), Image.Resampling.LANCZOS).save(path / "favicon.png")
+def make_logo(dest_assets: Path, app: dict) -> None:
+    """Copy each app's real brand logo into the site assets folder."""
+    dest_assets.mkdir(parents=True, exist_ok=True)
+    src: Path | None = app.get("logo")
+    if src is None or not src.exists():
+        raise FileNotFoundError(f"Logo missing for {app['name']}: {src}")
+
+    img = Image.open(src).convert("RGBA")
+    # Normalize to a square canvas so header/favicon crops stay clean.
+    w, h = img.size
+    side = max(w, h)
+    canvas = Image.new("RGBA", (side, side), (0, 0, 0, 0))
+    canvas.paste(img, ((side - w) // 2, (side - h) // 2), img)
+
+    logo = canvas.resize((512, 512), Image.Resampling.LANCZOS)
+    favicon = canvas.resize((64, 64), Image.Resampling.LANCZOS)
+    logo.save(dest_assets / "logo.png", optimize=True)
+    favicon.save(dest_assets / "favicon.png", optimize=True)
 
 
 def svg_icon(kind: str) -> str:
